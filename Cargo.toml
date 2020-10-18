@@ -1,6 +1,11 @@
 [workspace]
 
 members = [
-    "safe_gl",
+    "water",
+    "gl_img",
+    "gl_obj",
+    "gl_safe",
+    "gl_vec",
+    "gl_win",
+    "vec_types",
 ]
-

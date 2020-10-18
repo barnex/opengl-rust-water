@@ -1,8 +1,10 @@
 [package]
-name = "safe_gl"
+name = "gl_img"
 version = "0.1.0"
 authors = ["Arne Vansteenkiste <barnex@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+gl_obj = { path = "../gl_obj" }
 gl = "0.14.0"
+image = "0.23"
