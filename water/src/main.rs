@@ -19,7 +19,6 @@ use structopt::StructOpt;
 const MIN_POW: f32 = 0.05;
 const MAX_POW: f32 = 0.2;
 
-// Command-line options:
 /// OpenGL water simulation.
 #[derive(StructOpt)]
 struct Cli {
@@ -60,7 +59,7 @@ struct Cli {
 	dispersion: f32,
 
 	/// Water to floor distance, relative to lateral size.
-	#[structopt(long, default_value = "2.0")]
+	#[structopt(long, default_value = "2.5")]
 	depth: f32,
 
 	/// Reflection strength.
@@ -90,13 +89,6 @@ struct Cli {
 	/// Sun position y.
 	#[structopt(long, default_value = "0.1")]
 	sun_y: f32,
-
-	// Sun position.
-	//#[structopt(long, default_value = "0.1, 0.2")]
-	//sun: vec2,
-	/// Show frames per second.
-	#[structopt(long)]
-	fps: bool,
 }
 
 fn main() {
@@ -110,7 +102,7 @@ fn main() {
 	// water state
 	let s = State::new(size, &args.sky, &args.floor);
 
-	let light_dir = vec3(args.sun_x, args.sun_y, 1.0); // TODO: normalize!
+	//let light_dir = vec3(args.sun_x, args.sun_y, 1.0); // TODO: normalize!
 
 	s.p_accel //
 		.set1f("damping", args.damping);
