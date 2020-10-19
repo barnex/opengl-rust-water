@@ -7,5 +7,4 @@ members = [
     "gl_safe",
     "gl_vec",
     "gl_win",
-    "vec_types",
 ]
